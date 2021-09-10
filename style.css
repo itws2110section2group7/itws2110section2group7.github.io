@@ -1,0 +1,339 @@
+body {
+  background-image: url('../images/backgroundblack.jpg');
+  color: white;
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+
+/* Header stuff and motto */
+
+#motto {
+  display: table;
+  margin: 10px auto;
+  font-size: 25px;
+}
+
+#logo {
+  vertical-align: middle;
+  background: white;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+#team {
+  font-size: 10em;
+  text-align: center;
+  margin: 0;
+  background: #001a37;
+  border-bottom: 2px solid #c8c8e6;
+}
+
+
+/* For the work showcases */
+
+#previous-works {
+  font-size: 20px;
+  list-style: none;
+  text-align: left;
+  margin: 0;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.showcase {
+  background-color: #001a37;
+  margin: 15px;
+  vertical-align: middle;
+  border-radius: 10px;
+  border: 2px solid #c8c8e6;
+  padding-right: 10px;
+  overflow: hidden;
+}
+
+.thumbnail {
+  max-height: 80px;
+  vertical-align: middle;
+  margin-right: 10px;
+  background-color: #002f63;
+}
+
+
+/* Headshots */
+.photosection{
+	margin-bottom: 5%
+}
+
+.photo {
+  width: 20%;
+  margin-left: 10%;
+  display: inline;
+  position: relative;
+}
+
+.photo img {
+  width: 20%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  border-right: 2px solid #c8c8e6;
+  border-left: 2px solid #c8c8e6;
+  border-top: 2px solid #c8c8e6;
+}
+
+.photocaption {
+  box-sizing: border-box;
+  font-size: 1.5em;
+  position: absolute;
+  width: 100%;
+  left: 0%;
+  top: 0%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: center;
+  cursor: pointer;
+  background-color: #001a37;
+  border-radius: 0 0 10px 10px;
+  border-right: 2px solid #c8c8e6;
+  border-left: 2px solid #c8c8e6;
+  border-bottom: 2px solid #c8c8e6;
+}
+
+.photo:hover .photocaption {
+  background-color: #c8c8e6;
+  color: #002f63;
+  cursor: pointer;
+}
+
+
+/*will resume css*/
+
+.will {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("/images/hotel-wallpaper.png");
+}
+
+.will h1 {
+  font-size: 75px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-variant: small-caps;
+}
+
+.will h2 {
+  float: left;
+  clear: left;
+  text-align: left;
+  width: 260px;
+  margin: 20px;
+  padding: 0;
+  font-size: 25px;
+}
+
+#contactInfo {
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+  padding: 2px 0 2px 0;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#contactInfo li {
+  display: inline;
+  list-style: none;
+  margin: 0 0.25em 0 0.25em;
+}
+
+.content-box1 {
+  border: 1px solid white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 0px;
+  margin-left: 330px;
+  margin-right: 50px;
+}
+
+#content-box-B {
+  border: 1px solid white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+
+/*Viano resume css*/
+
+.vcard img {
+  height: 150px;
+  width: 150px;
+  float: left;
+  margin-right: 6px;
+}
+
+.vheader h1 {
+  font-family: segoe ui;
+  float: left;
+  margin-left: 5%;
+  line-height: 150px;
+  margin-bottom: 0px;
+}
+
+#hcard-Viano-Arcery {
+  font-family: segoe ui;
+  float: right;
+  margin-right: 5%;
+  margin-top: 35px;
+}
+
+.vmaincontent {
+  font-family: segoe ui;
+  font-size: 1.1em;
+  clear: left;
+  clear: right;
+  top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.veducation {
+  margin-top: 3%;
+}
+
+.vtable {
+  border-collapse: collapse;
+  border: solid #002f63 5px;
+  border-radius: 4px;
+  background-color: #002f63;
+  margin-left: 5%;
+}
+
+.vtable td,
+tr {
+  border-bottom: 1px solid white;
+  padding: 10px;
+}
+
+.vheader {
+  font-size: 1.1em;
+  height: 225px;
+  background-color: #002f63;
+  z-index: -1;
+  margin-top: 0px;
+}
+
+.vmaincontent h3 {
+  font-size: 1.3em;
+}
+
+.vskills ul,
+.vskills li {
+  list-style-type: '-  ';
+  padding-bottom: 10px;
+}
+
+.vheader a,
+.vmaincontent a {
+  color: white;
+}
+
+
+/* Carter Resume CSS */
+
+#carter-resume body {
+  font-family: Cambria;
+  margin: 4em;
+}
+
+#carter-resume h2 {
+  margin: 20px 0 0 0;
+  padding: 0;
+  font-size: 1.2em;
+  font-variant: small-caps;
+  border-bottom: 1px solid #002f63;
+}
+
+#carter-resume p {
+  margin: 8px;
+}
+
+#carter-resume .vcard {
+  text-align: center;
+}
+
+#carter-resume .fn {
+  font-weight: bold;
+  font-variant: small-caps;
+  font-size: 2em;
+  border-bottom: 1px solid #002f63;
+}
+
+#carter-resume .email,
+#carter-resume .email:visited {
+  text-decoration: none;
+  color: #002f63;
+}
+
+
+/* Content div makes styling easier */
+
+#content {
+  width: 80em;
+  border: 4px solid #002f63;
+  border-radius: 10px;
+  padding: 8px;
+  background-color: #FBFBF8;
+  color: #002f63;
+  margin: 40px auto 0 auto;
+}
+
+
+/* Styles for the skills list */
+
+#skills {
+  list-style-type: disclosure-closed;
+  /* Changes bullet style */
+  columns: 3;
+  max-width: 50em;
+}
+
+#skills li {
+  padding: 3px;
+}
+
+
+/* Style the header of the professional experiences */
+
+.professional-description {
+  font-weight: bold;
+}
+
+
+/* Style for the highlights of each professional experience */
+
+.highlights {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 30px 0;
+}
+
+.highlights li {
+  margin: 12px 0 0 8px;
+}
+
+
+/* Side-by-side div styles */
+
+.sbs {
+  display: inline-block;
+  vertical-align: top;
+  width: 39em;
+}
+
+.sbs-left {
+  margin-right: 1em;
+}
