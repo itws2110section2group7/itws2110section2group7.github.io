@@ -1,0 +1,294 @@
+body {
+  width: 100%;
+  height: 100%;
+  background: #252525;
+  color: white;
+  font-family: 'Permanent Marker', cursive;
+}
+
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+li {
+  list-style: none；
+}
+
+div {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+p {
+  text-align: center;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+}
+
+#content {
+  margin-top: 30px;
+}
+
+.section {
+  border-color: white;
+  border-style: solid;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 15px;
+  max-width: 65vw;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url('./images/black.jpg')
+}
+
+.section-title {
+  border-bottom: 1px solid white;
+  max-width: 57em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0.4em;
+  font-size: 2.4em;
+}
+
+
+/*navigation*/
+
+#mini {
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.nav {
+  position: fixed;
+  width: 220px;
+  height: 100%;
+  transition: all .3s;
+  float: left;
+}
+
+.nav button {
+  border-style: none;
+  background-color: #252525;
+  color: white;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 1.1em;
+}
+
+.nav button:hover {
+  color: #FFF;
+  background: rgba(0, 0, 0, .1);
+  cursor: pointer;
+}
+
+.nav a {
+  display: block;
+  padding-left: 20px;
+  line-height: 46px;
+  max-height: 100px;
+  color: white;
+  transition: all .3s;
+}
+
+.nav a span {
+  margin-left: 10px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item.nav-show {
+  border-bottom: none;
+}
+
+.nav-item ul {
+  display: none;
+  background: rgba(0, 0, 0, .1);
+}
+
+.nav-item.nav-show ul {
+  display: block;
+}
+
+.nav-show,
+.nav-item>a:hover {
+  color: #FFF;
+  background: rgba(0, 0, 0, .1);
+  cursor: pointer;
+}
+
+.nav-item li:hover a {
+  color: #FFF;
+  background: #605b5b;
+  cursor: pointer;
+}
+
+.tooltip {
+  /* makes it a container */
+  position: relative;
+  /* dotted underline to indicate that it is hoverable */
+  border-bottom: 1px dotted rgb(255, 255, 255);
+  border-radius: 2px;
+}
+
+.tooltip:hover {
+  /* delay the transition to match the animation timing on the sudoelements */
+  transition: 300ms;
+  transition-delay: 200ms;
+  background-color: #605b5b;
+  cursor: pointer;
+}
+
+.tooltip::before,
+.tooltip::after {
+  /* Prevents these from being hoverable */
+  pointer-events: none;
+  position: absolute;
+  /* Need display and opacity to hide it and animate the reveal */
+  display: none;
+  opacity: 0;
+}
+
+.tooltip::before {
+  /* needs content to show up */
+  content: "";
+  z-index: 1001;
+  /* the arrow */
+  border: 10px solid transparent;
+}
+
+.tooltip::after {
+  /* This pulls the data-text attribute value from the HTML element and uses it as the content of the ::after sudo element */
+  content: attr(data-text);
+  z-index: 1000;
+  min-width: 200px;
+  max-width: 800px;
+  max-height: 500px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #605b5b;
+  border: 2px solid white;
+  color: #fff;
+  text-align: center;
+}
+
+
+/* Upward tooltips */
+
+.tooltip.up::before {
+  /* Postion off the bottom margin of the container and set the correct border for the triangle */
+  bottom: 100%;
+  border-bottom-width: 0;
+  border-top-color: white;
+}
+
+.tooltip.up::after {
+  /* Align from the bottom margin of the container and offset by 10px to allow for the arrow to fit */
+  bottom: calc(100% + 10px);
+}
+
+.tooltip.up::before,
+.tooltip.up::after {
+  /* Positioning trick to get the elements aligned in the center without causing the other elements to flow around */
+  left: 50%;
+  transform: translate(-50%, -.5em);
+}
+
+
+/* Downward tooltips */
+
+.tooltip.down::before {
+  top: 100%;
+  border-top-width: 0;
+  border-bottom-color: white;
+}
+
+.tooltip.down::after {
+  top: calc(100% + 10px);
+}
+
+.tooltip.down::before,
+.tooltip.down::after {
+  left: 50%;
+  transform: translate(-50%, .5em);
+}
+
+.tooltip.left::before {
+  top: 50%;
+  border-right-width: 0;
+  border-left-color: white;
+  left: calc(0em - 10px);
+  transform: translate(-.5em, -50%);
+}
+
+.tooltip.left::after {
+  top: 50%;
+  right: calc(100% + 10px);
+  transform: translate(-.5em, -50%);
+}
+
+.tooltip.right::before {
+  top: 50%;
+  border-left-width: 0;
+  border-right-color: white;
+  right: calc(0em - 10px);
+  transform: translate(.5em, -50%);
+}
+
+.tooltip.right::after {
+  top: 50%;
+  left: calc(100% + 10px);
+  transform: translate(.5em, -50%);
+}
+
+.tooltip:hover:before,
+.tooltip:hover:after {
+  /* Redisplay on hover */
+  display: block;
+}
+
+@keyframes tooltips-vert {
+  /* KeyFrames control animations with finer detail */
+  to {
+    opacity: .95;
+    /* This causes a shifting effect that makes it look like the tooltip is flying towards the highlighted text */
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes tooltips-horz {
+  to {
+    opacity: .95;
+    transform: translate(0, -50%);
+  }
+}
+
+
+/* Animate the tooltips on each various hover */
+
+.tooltip.up:hover::before,
+.tooltip.up:hover::after,
+.tooltip.down:hover::before,
+.tooltip.down:hover::after {
+  /* Animate lets you specify a keyframe to control the animation along with other things like delay, speed, etc */
+  animation: tooltips-vert 300ms ease-out 200ms forwards;
+}
+
+.tooltip.left:hover::before,
+.tooltip.left:hover::after,
+.tooltip.right:hover::before,
+.tooltip.right:hover::after {
+  animation: tooltips-horz 300ms ease-out 200ms forwards;
+}
