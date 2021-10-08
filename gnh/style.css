@@ -1,0 +1,389 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: block;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  transition-duration: 0.5s;
+}
+
+
+/* On hover for li */
+
+li:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+li a {
+  color: white;
+}
+
+#home-content {
+  background-image: url("./images/gnh_logo_faded.png");
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  background-position: 50%;
+  background-size: 32%;
+}
+
+#home-title {
+  text-align: center;
+  font-size: 10em;
+  color: rgb(9, 40, 240);
+  margin: auto;
+  width: max-content;
+  padding: 0 2vw;
+  text-shadow: 2px 2px white;
+  border-bottom: 5px solid rgb(9, 40, 240);
+  transform: translate(0, 25%);
+}
+
+#nav-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1000;
+  position: relative;
+}
+
+.pstyle {
+  text-align: center;
+  font-size: 1.5vw;
+  max-width: 60vw;
+  margin: auto;
+  background-color: #cccccc8c;
+  color: rgb(9, 40, 240);
+  padding: 17px;
+  border-radius: 5px;
+}
+
+.corner {
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  left: 2vw;
+}
+
+.corner img {
+  width: 17em;
+}
+
+.cols {
+  display: flex;
+}
+
+.photo-col {
+  display: flex;
+  flex-flow: column;
+  max-width: 15vw;
+  margin: auto;
+  border: 5px solid rgba(0, 27, 234, 0.9);
+  border-radius: 3px;
+  box-shadow: 5px 5px 7px 2px rgba(0, 27, 234, 0.23);
+}
+
+.photo-col img {
+  width: 100%;
+  height: 100%;
+}
+
+.photo-col-photo-col-img-wrapper {
+  display: flex;
+}
+
+.section {
+  display: flex;
+  background-color: #97b4f7;
+}
+
+.image-holder {
+  height: 100vh;
+  width: 50vw;
+  overflow: hidden;
+}
+
+.image-holder>img {
+  height: 100%;
+  width: auto;
+}
+
+.text-area {
+  height: 100vh;
+  width: 50vw;
+}
+
+.text-area h1 {
+  padding-bottom: 0.4em;
+  font-size: 2.4em;
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+
+.text-area h2 {
+  padding-bottom: 0.2em;
+  margin-left: 13px;
+  font-size: 2.0em;
+  color: maroon;
+}
+
+.text-area p {
+  color: black;
+  font-size: 25px;
+  margin-left: 13px;
+  margin-bottom: 5px;
+}
+
+
+/* Navigation and dropdown menu styling */
+
+
+/* Make dropdowns hidden until hover */
+
+.nav_bar li ul {
+  padding: 0;
+  margin-top: 0;
+  transform-origin: 0 0;
+  transform: scaleY(0);
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  box-shadow: 3px 3px 6px 3px rgba(132, 146, 255, 0.41);
+  transition: transform 300ms ease;
+}
+
+ul li:hover>.dropdown {
+  transform: scale(1);
+}
+
+
+/* Nav bar styling */
+
+.nav_bar {
+  width: max-content;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  background-color: rgb(9, 40, 240);
+  box-shadow: 3px 6px 6px 5px rgba(132, 146, 255, 0.41);
+  min-width: 35vw;
+}
+
+.nav_bar>li {
+  display: flex;
+  font-size: 50px;
+  text-align: center;
+  width: 50%;
+  min-width: max-content;
+  border-right: 1px solid white;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* No border on last child */
+
+.nav_bar>li:last-child {
+  border: none;
+}
+
+
+/* Styling the li elements and <a> tags inside them */
+
+.nav_bar li>a {
+  display: inline-block;
+}
+
+.dropdown>li {
+  background-color: rgb(9, 40, 240);
+  text-align: center;
+  min-width: 110px;
+  padding: 6px;
+  font-size: 35px;
+}
+
+
+/* Hover styling for the li elements */
+
+.nav_bar>li:hover,
+.dropdown>li:hover {
+  background-color: rgb(132, 146, 255);
+}
+
+.activity-background {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  width: 100vw;
+  transform: scale(1.2);
+  background-image: url('./images/picnic.jpg');
+}
+
+#activity-pic {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 135%;
+}
+
+#activity-logo {
+  position: absolute;
+  display: block;
+  z-index: 3;
+  width: 20%;
+  cursor: pointer;
+}
+
+.footer {
+  color: white;
+  font-size: 1vw;
+  position: fixed;
+  justify-content: space-evenly;
+  background-color: rgb(9, 40, 240);
+  display: flex;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid white;
+  z-index: 1000;
+}
+
+.footer img {
+  max-width: 1vw;
+  padding-left: 20px;
+}
+
+.footer>* {
+  border-right: 1px solid white;
+  display: inline-block;
+  margin: 0;
+  padding: 5px 25px;
+}
+
+.footer-cell {
+  padding: 5px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-cell a {
+  display: flex;
+  color: white;
+}
+
+.main-group {
+  width: 100vw;
+  height: 1050px;
+  background: #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-content {
+  width: 95%;
+  margin-top: 40vh;
+  margin-bottom: 10vh;
+  height: 700px;
+  display: flex;
+  margin-right: 2.7vw;
+}
+
+.item-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  width: 70px;
+  overflow: hidden;
+  transition: all .4s;
+  background-color: white;
+}
+
+.item-group .title {
+  width: 700px;
+  height: 50px;
+  line-height: 45px;
+  text-indent: 45px;
+  left: -325px;
+  background-color: #0928f0;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  transform: rotate(-90deg);
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.item-group .desc {
+  box-sizing: border-box;
+  height: 100%;
+  background: #fff;
+  padding: 30px 30px 30px 66px;
+  color: #666;
+  flex: 1;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.item-group .desc h1 {
+  margin-bottom: 16px;
+  width: 505px;
+  font-size: 30px;
+  margin-left: 20px;
+  color: #2c4a7c;
+}
+
+.item-group .desc p {
+  margin-bottom: 16px;
+  width: 505px;
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.item-group .img img {
+  width: 650px;
+  height: 600px;
+  object-fit: contain;
+  opacity: 0;
+  border-style: none;
+  transition: all 0.4s;
+}
+
+.item-group.self {
+  width: 90vw;
+}
+
+.item-group.self .desc {
+  opacity: 1;
+}
+
+.item-group.self .img img {
+  opacity: 1;
+}

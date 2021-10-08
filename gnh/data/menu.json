@@ -1,0 +1,24 @@
+{
+  "menus": [{
+      "title": "Home",
+      "url": "./index.html"
+    },
+    {
+      "title": "Activities",
+      "url": "./activities.html",
+      "menus": [{
+          "title": "Expose",
+          "url": "./activities.html?topic=expose#activity-slider"
+        },
+        {
+          "title": "Newsletter",
+          "url": "./activities.html?topic=newsletter#activity-slider"
+        },
+        {
+          "title": "Tutoring",
+          "url": "./activities.html?topic=tutoring#activity-slider"
+        }
+      ]
+    }
+  ]
+}
