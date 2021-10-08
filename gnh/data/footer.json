@@ -1,0 +1,47 @@
+{
+  "cells": [
+    [{
+        "img": "./images/linkedin.png",
+        "href": "",
+        "alt": "Linkedin",
+        "text": ""
+      },
+      {
+        "img": "./images/twitter.png",
+        "href": "",
+        "alt": "Twitter",
+        "text": ""
+      },
+      {
+        "img": "./images/insta.png",
+        "href": "",
+        "alt": "Instagram",
+        "text": ""
+      },
+      {
+        "img": "./images/facebook.png",
+        "href": "",
+        "alt": "Facebook",
+        "text": ""
+      },
+      {
+        "img": "./images/tiktok.png",
+        "href": "",
+        "alt": "Tiktok",
+        "text": ""
+      }
+    ],
+    [{
+      "img": "./images/email.png",
+      "href": "mailto:smitha24@rpi.edu",
+      "alt": "Email President",
+      "text": "President"
+    }],
+    [{
+      "img": "./images/email.png",
+      "href": "mailto:gammanueta@rpi.edu",
+      "alt": "Email Mailing List",
+      "text": "Mailing List"
+    }]
+  ]
+}
